@@ -1,9 +1,10 @@
 .main-nav {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: @Oswald;
   font-size: 20px;
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .main-nav__list {
@@ -15,4 +16,10 @@
 .main-nav__list a {
   text-decoration: none;
   color: @black;
+}
+
+.main-nav__item {
+  padding-top: 22px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid @special-line-grey;
 }

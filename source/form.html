@@ -9,10 +9,7 @@
     <header class="page-header">
       <div class="page-header__logo">
         <a class="logo__icon" href="index.html">
-          <img src="img/logo-mobile.svg" width="34" height="38" alt="Логотип">
-        </a>
-        <a class="logo__text" href="index.html">
-          <img src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи">
+          <img src="img/logo-mobile.svg" width="191" height="38" alt="Логотип «Кэт энерджи»">
         </a>
       </div>
       <button class="page-header__toggle" type="button">
@@ -33,14 +30,14 @@
       </nav>
     </header>
     <main class="page-main">
-      <section class="program-selection">
+      <section class="page-main__program-selection program-selection">
         <h1 class="program-selection__title title">Подбор программы</h1>
         <p class="program-selection__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <form class="program-selection__form form" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="form__group form__group--personal-information">
             <ul class="form__list">
               <li class="form__item">
-                <div class="form__text-field text-field">
+                <div class="text-field">
                   <label class="text-field__label" for="cat-name">
                     Имя:*
                   </label>
@@ -48,7 +45,7 @@
                 </div>
               </li>
               <li class="form__item">
-                <div class="form__text-field text-field">
+                <div class="text-field">
                   <label class="text-field__label" for="cat-weight">
                     Вес (кг):*
                   </label>
@@ -56,7 +53,7 @@
                 </div>
               </li>
               <li class="form__item">
-                <div class="form__text-field text-field">
+                <div class="text-field">
                   <label class="text-field__label" for="cat-age">
                     Возраст (лет):
                   </label>
@@ -68,21 +65,21 @@
           <fieldset class="form__group form__group--product-type">
             <ul class="form__list">
               <li class="form__item">
-                <label class="form__control control">
+                <label class="control">
                   <input class="visually-hidden" type="radio" name="slimming" value="slimming" checked>
                   <span class="control__mark"></span>
                   <span class="control__label">Похудение</span>
                 </label>
               </li>
               <li class="form__item">
-                <label class="form__control control">
+                <label class="control">
                   <input class="visually-hidden" type="radio" name="weight-gain" value="weight-gain">
                   <span class="control__mark"></span>
                   <span class="control__label">Набор массы</span>
                 </label>
               </li>
               <li class="form__item">
-                <label class="form__control control">
+                <label class="control">
                   <input class="visually-hidden" type="radio" name="ask-us" value="ask-us">
                   <span class="control__mark"></span>
                   <span class="control__label">Не знаю (нужен ваш совет)</span>
@@ -94,7 +91,7 @@
             <legend class="form__legend">Контактные данные (владельца кота)</legend>
             <ul class="form__list">
               <li class="form__item form__item--e-mail">
-                <div class="form__text-field text-field">
+                <div class="text-field">
                   <label class="text-field__label" for="e-mail">
                     E-mail:*
                   </label>
@@ -102,7 +99,7 @@
                 </div>
               </li>
               <li class="form__item form__item--phone">
-                <div class="form__text-field text-field">
+                <div class="text-field">
                   <label class="text-field__label" for="phone">
                     Телефон:*
                   </label>
@@ -118,28 +115,28 @@
           <fieldset class="form__group form__group--additional-information">
             <ul class="form__list">
               <li class="form__item">
-                <label class="form__control control">
+                <label class="control">
                   <input class="visually-hidden" type="checkbox" name="sweetener" value="sweetener" checked>
                   <span class="control__mark control__mark--check-box"></span>
                   <span class="control__label">Сахарозаменитель</span>
                 </label>
               </li>
               <li class="form__item">
-                <label class="form__control control">
+                <label class="control">
                   <input class="visually-hidden" type="checkbox" name="water" value="water">
                   <span class="control__mark control__mark--check-box"></span>
                   <span class="control__label">Питьевая вода</span>
                 </label>
               </li>
               <li class="form__item">
-                <label class="form__control control">
+                <label class="control">
                   <input class="visually-hidden" type="checkbox" name="milk" value="milk">
                   <span class="control__mark control__mark--check-box"></span>
                   <span class="control__label">Молоко</span>
                 </label>
               </li>
               <li class="form__item">
-                <label class="form__control control">
+                <label class="control">
                   <input class="visually-hidden" type="checkbox" name="vitamins" value="vitamins">
                   <span class="control__mark control__mark--check-box"></span>
                   <span class="control__label">Витамины</span>
