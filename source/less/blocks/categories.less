@@ -1,7 +1,25 @@
-.categories {
-  margin: 0;
+.categories__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  margin: auto;
+
+  @media (min-width: @width-tablet) {
+    width: 708px;
+  }
+
+  @media (min-width: @width-desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1220px;
+    gap: 80px;
+  }
 }
 
 .categories__card {
   margin-bottom: 20px;
+
+  @media (min-width: @width-tablet) {
+    margin-bottom: 30px;
+  }
 }

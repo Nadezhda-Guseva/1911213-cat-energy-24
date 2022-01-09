@@ -2,13 +2,126 @@
   background-color: @bg-medium;
   padding-top: 24px;
   padding-bottom: 40px;
+
+  @media (min-width: @width-tablet) {
+    background: transparent;
+    position: relative;
+    padding-top: 44px;
+    padding-bottom: 0;
+    border-top: 1px solid @border-light;
+    height: 1036px;
+  }
+
+  @media (min-width: @width-desktop) {
+    border-top: none;
+    height: 598px;
+  }
+}
+
+.example__wrapper {
+  width: 280px;
+  margin: auto;
+
+  @media (min-width: @width-tablet) {
+    width: 708px;
+  }
+
+  @media (min-width: @width-desktop) {
+    position: relative;
+    width: 1220px;
+  }
+}
+
+.example__title {
+  margin-bottom: 40px;
+
+  @media (min-width: @width-tablet) {
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: 146px;
+  }
+}
+
+.example__text {
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: @width-tablet) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 436px;
+    margin-bottom: 70px;
+  }
+}
+
+.example__factoids {
+  margin: 0;
+  margin-bottom: 34px;
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: 60px;
+  }
+}
+
+.example__factoids-wrapper {
+  @media (min-width: @width-tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: @width-desktop) {
+    flex-direction: column;
+    margin-bottom: 0;
+    width: 366px;
+  }
 }
 
 .example__caption {
+  display: block;
   font-family: @accent-font;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   color: @black;
   text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+
+  @media (min-width: @width-tablet) {
+    font-size: 20px;
+    line-height: 28px;
+    width: 174px;
+    text-align: right;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 366px;
+    text-align: left;
+  }
+}
+
+.example__background {
+  @media (min-width: @width-tablet) {
+    background-color: @bg-medium;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 462px;
+  }
+}
+
+.example__compare-slider {
+  @media (min-width: @width-desktop) {
+    position: absolute;
+    bottom: 34px;
+    right: 0;
+  }
 }

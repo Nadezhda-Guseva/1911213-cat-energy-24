@@ -1,6 +1,17 @@
 .page-main {
   margin: 0;
   flex-grow: 1;
+  background-color: @white;
+
+  @media (min-width: @width-tablet) {
+    z-index: -1;
+  }
+}
+
+.page-main__categories {
+  @media (min-width: @width-tablet) {
+    margin-bottom: 24px;
+  }
 }
 
 .page-main__main-header {
@@ -9,6 +20,14 @@
 
 .page-main__advantages {
   margin-bottom: 48px;
+
+  @media (min-width: @width-tablet) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: 70px;
+  }
 }
 
 .page-main__additional-products {

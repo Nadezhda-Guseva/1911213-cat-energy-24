@@ -1,6 +1,14 @@
 .categories-card {
-  background-color: @@bg-light;
+  background-color: @bg-light;
   padding: 22px;
+
+  @media (min-width: @width-tablet) {
+    padding: 52px;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 570px;
+  }
 }
 
 .categories-card__subtitle {
@@ -11,10 +19,21 @@
   color: @black;
   text-transform: uppercase;
   margin: 0;
+
+  @media (min-width: @width-tablet) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .categories-card__text {
+  padding-bottom: 22px;
+  border-bottom: 1px solid @border-light;
   margin: 22px 0;
+
+  @media (min-width: @width-tablet) {
+    border-bottom: none;
+  }
 }
 
 .categories-card__button {
@@ -25,4 +44,9 @@
   color: @black;
   text-transform: uppercase;
   text-decoration: none;
+
+  @media (min-width: @width-tablet) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

@@ -1,3 +1,20 @@
+.factoids {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+
+  @media (min-width: @width-tablet) {
+    gap: 42px;
+  }
+}
+
+.factoids__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
 .factoids__termin {
   font-family: @accent-font;
   font-size: 24px;
@@ -5,9 +22,44 @@
   line-height: 24px;
   color: @black;
   text-transform: uppercase;
+  padding: auto;
+  padding-top: 14px;
+  padding-bottom: 18px;
+  width: 124px;
+  border: 1px solid @border-medium;
+  border-radius: 3px;
+
+  @media (min-width: @width-tablet) {
+    width: 162px;
+  }
 }
 
 .factoids__description {
   font-size: 12px;
   line-height: 12px;
+  margin: 0;
+  background-color: @bg-medium;
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50px);
+  width: 60px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @media (min-width: @width-tablet) {
+    background-color: @white;
+    font-size: 14px;
+    line-height: 14px;
+    width: 128px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-74px);
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  @media (min-width: @width-desktop) {
+    background-color: @bg-medium;
+  }
 }

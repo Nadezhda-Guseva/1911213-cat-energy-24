@@ -1,3 +1,9 @@
+.compare-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .compare-slider__button {
   font-family: @accent-font;
   font-size: 16px;
@@ -6,5 +12,113 @@
   color: @black;
   text-transform: uppercase;
   background: transparent;
+  padding: 4px 0;
   border: none;
+
+  @media (min-width: @width-tablet) {
+    font-size: 20px;
+    line-height: 30px;
+    border-bottom: 1px dashed @border-medium;
+  }
+}
+
+.compare-slider__illustration-wrapper {
+  margin-bottom: 16px;
+  display: flex;
+
+  @media (min-width: @width-tablet) {
+    margin-bottom: 40px;
+  }
+}
+
+.compare-slider__illustration {
+  &--before {
+    background-image: url("../img/cat-before-mobile.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 232px;
+    margin: auto;
+
+    @media (min-width: @width-tablet) {
+      background-image: url("../img/cat-before-tablet.png");
+      width: 666px;
+      height: 512px;
+    }
+  }
+
+  &--after {
+    background-image: url("../img/cat-after-mobile.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 232px;
+    margin: auto;
+
+    @media (min-width: @width-tablet) {
+      background-image: url("../img/cat-after-tablet.png");
+      width: 536px;
+      height: 512px;
+    }
+  }
+}
+
+.compare-slider__toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  @media (min-width: @width-tablet) {
+    gap: 24px;
+  }
+}
+
+.compare-slider__bar {
+  display: flex;
+  align-items: center;
+  width: 86px;
+  height: 14px;
+  background-color: @white;
+  border: 1px solid @border-medium;
+  border-radius: 6px;
+
+  @media (min-width: @width-tablet) {
+    width: 426px;
+    height: 6px;
+    background-color: @border-light;
+    border: none;
+    border-radius: 6px;
+  }
+}
+
+.compare-slider__toggle {
+  margin: 4px;
+  width: 36px;
+  height: 6px;
+  border: none;
+  background-color: @primary;
+  border-radius: 6px;
+
+  @media (min-width: @width-tablet) {
+    position: relative;
+    margin: 0;
+    width: 34px;
+    height: 34px;
+    border: 1px solid @border-medium;
+    background-color: @white;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-4px) translateY(-4px);
+      height: 8px;
+      width: 8px;
+      background-color: @primary;
+      border-radius: 50%;
+    }
+  }
 }
