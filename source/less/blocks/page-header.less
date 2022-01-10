@@ -29,6 +29,12 @@
   left: 0;
   z-index: 10;
   width: 100%;
+  display: none;
+
+  &--no-js,
+  &--opened {
+    display: block;
+  }
 
   @media (min-width: @width-tablet) {
     position: static;
@@ -64,12 +70,13 @@
   padding: 0;
   border: none;
   background: transparent;
-  background-image: url("../img/icon-cross.svg");
+  background-image: url("../img/icon-burger.svg");
   background-repeat: no-repeat;
   background-position: center;
   margin-left: auto;
 
-  &--closed {
+  &--no-js,
+  &--opened {
     background-image: url("../img/icon-cross.svg");
   }
 
