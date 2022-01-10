@@ -1,7 +1,5 @@
 .page-header {
-  background-color: @white;
-  color: @black;
-  border-bottom: 1px solid @border-light;
+  position: relative;
 
   @media (min-width: @width-tablet) {
     border-bottom: none;
@@ -14,51 +12,65 @@
 
 .page-header__wrapper {
   @media (min-width: @width-tablet) {
-    border-bottom: none;
     display: flex;
-    flex-direction: row;
-    width: 708px;
-    margin: auto;
+    align-items: top;
+    padding: 20px;
   }
 
   @media (min-width: @width-desktop) {
     width: 1220px;
+    margin: 0 auto;
   }
 }
 
-.page-header__menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 280px;
-  margin: auto;
+.page-header__main-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  width: 100%;
 
   @media (min-width: @width-tablet) {
-    border-bottom: none;
-    width: 708px;
+    position: static;
+    width: auto;
+    margin-left: 20px;
   }
 }
 
+
 .page-header__logo {
-  padding-top: 12px;
-  padding-bottom: 16px;
+  display: block;
+  padding: 10px 20px 17px;
+
+  img {
+    display: block;
+    width: 191px; // размеры для примера, смотри в макете
+    height: 38px;
+  }
+
+  @media (min-width: @width-tablet) {
+    margin-right: auto;
+    padding: 0;
+  }
 }
 
 .page-header__toggle {
+  position: absolute;
+  top: 20px; // размеры для примера, смотри в макете
+  right: 20px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  padding: 0;
   border: none;
   background: transparent;
-  width: 24px;
-
-  &--opened {
-    background-image: url("../img/icon-cross.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  background-image: url("../img/icon-cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: auto;
 
   &--closed {
-    background-image: url("../img/icon-burger.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url("../img/icon-cross.svg");
   }
 
   @media (min-width: @width-tablet) {
