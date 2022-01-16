@@ -1,7 +1,5 @@
 .page-header {
-  background-color: @white;
-  color: @black;
-  border-bottom: 1px solid @border-light;
+  position: relative;
 
   @media (min-width: @width-tablet) {
     border-bottom: none;
@@ -13,50 +11,81 @@
 }
 
 .page-header__wrapper {
-  @media (min-width: @width-tablet) {
-    border-bottom: none;
-    display: flex;
-    flex-direction: row;
-    width: 708px;
-    margin: auto;
-  }
-
-  @media (min-width: @width-desktop) {
-    width: 1220px;
-  }
-}
-
-.page-header__menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 280px;
+  width: @wrapper-mobile;
   margin: auto;
 
   @media (min-width: @width-tablet) {
-    border-bottom: none;
-    width: 708px;
+    display: flex;
+    align-items: top;
+    width: @wrapper-tablet;
+    margin: auto;
+    padding: 20px;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: @wrapper-desktop;
+    margin: 0 auto;
+  }
+}
+
+.page-header__main-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  display: none;
+
+  &--no-js,
+  &--opened {
+    display: block;
+  }
+
+  @media (min-width: @width-tablet) {
+    position: static;
+    width: @wrapper-tablet;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-left: auto;
   }
 }
 
 .page-header__logo {
-  padding-top: 12px;
-  padding-bottom: 16px;
+  display: block;
+  padding: 12px 20px 17px;
+
+  img {
+    display: block;
+    width: 256px;
+  }
+
+  @media (min-width: @width-tablet) {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    padding: 0;
+  }
 }
 
 .page-header__toggle {
-  border: none;
-  background: transparent;
+  position: absolute;
+  top: 20px;
+  left: calc(50% + 100px);
+  display: block;
   width: 24px;
+  height: 24px;
+  margin-left: auto;
+  padding: 0;
+  background: transparent;
+  background-image: url("../img/icon-burger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
 
+  &--no-js,
   &--opened {
     background-image: url("../img/icon-cross.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  &--closed {
-    background-image: url("../img/icon-burger.svg");
     background-repeat: no-repeat;
     background-position: center;
   }

@@ -5,14 +5,14 @@
 }
 
 .compare-slider__button {
+  padding: 4px 0;
   font-family: @accent-font;
   font-size: 16px;
-  font-weight: 400;
   line-height: 20px;
-  color: @black;
+  font-weight: 400;
   text-transform: uppercase;
+  color: @black;
   background: transparent;
-  padding: 4px 0;
   border: none;
 
   @media (min-width: @width-tablet) {
@@ -23,42 +23,39 @@
 }
 
 .compare-slider__illustration-wrapper {
+  position: relative;
+  width: @wrapper-mobile;
+  height: 232px;
   margin-bottom: 16px;
-  display: flex;
 
   @media (min-width: @width-tablet) {
+    width: 592px;
+    height: 510px;
     margin-bottom: 40px;
   }
 }
 
 .compare-slider__illustration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 232px;
+
   &--before {
-    background-image: url("../img/cat-before-mobile.png");
-    background-position: top center;
-    background-repeat: no-repeat;
-    width: 280px;
-    height: 232px;
-    margin: auto;
+    width: 100%;
+
 
     @media (min-width: @width-tablet) {
-      background-image: url("../img/cat-before-tablet.png");
-      width: 666px;
-      height: 512px;
+      width: 50%;
     }
   }
 
   &--after {
-    background-image: url("../img/cat-after-mobile.png");
-    background-position: top center;
-    background-repeat: no-repeat;
-    width: 280px;
-    height: 232px;
-    margin: auto;
+    width: 0;
 
     @media (min-width: @width-tablet) {
-      background-image: url("../img/cat-after-tablet.png");
-      width: 536px;
-      height: 512px;
+      width: 50%;
+      overflow: hidden;
     }
   }
 }
@@ -87,25 +84,24 @@
     height: 6px;
     background-color: @border-light;
     border: none;
-    border-radius: 6px;
   }
 }
 
 .compare-slider__toggle {
-  margin: 4px;
   width: 36px;
   height: 6px;
-  border: none;
+  margin: 4px;
   background-color: @primary;
+  border: none;
   border-radius: 6px;
 
   @media (min-width: @width-tablet) {
     position: relative;
-    margin: 0;
     width: 34px;
     height: 34px;
-    border: 1px solid @border-medium;
+    margin: 0;
     background-color: @white;
+    border: 1px solid @border-medium;
     border-radius: 50%;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
 
@@ -115,8 +111,8 @@
       top: 50%;
       left: 50%;
       transform: translateX(-4px) translateY(-4px);
-      height: 8px;
       width: 8px;
+      height: 8px;
       background-color: @primary;
       border-radius: 50%;
     }

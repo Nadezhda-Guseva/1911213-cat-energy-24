@@ -9,17 +9,13 @@
   <body class="page__body">
     <header class="page-header">
       <div class="page-header__wrapper" >
-        <div class="page-header__menu">
-          <div class="page-header__logo">
-            <a class="logo__icon" href="index.html">
-              <img src="img/logo-mobile.svg" width="191" height="38" alt="Логотип «Кэт энерджи»">
-            </a>
-          </div>
-          <button class="page-header__toggle page-header__toggle--opened" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-        </div>
-        <nav class="main-nav">
+        <a class="page-header__logo" href="index.html">
+          <img src="img/logo-mobile.svg" width="256" height="38" alt="Логотип «Кэт энерджи»">
+        </a>
+        <button class="page-header__toggle page-header__toggle--no-js" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <nav class="page-header__main-nav page-header__main-nav--no-js main-nav">
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--current">
               <a class="main-nav__link" href="index.html">
@@ -42,7 +38,6 @@
     </header>
     <main class="page-main">
       <section class="page-main__main-header main-header">
-        <div class="main-header__background"></div>
         <div class="main-header__wrapper">
           <h1 class="main-header__title title">Функциональное питание для котов</h1>
           <p class="main-header__caption">Занялся собой? Займись котом!</p>
@@ -105,8 +100,12 @@
           </div>
           <div class="example__compare-slider compare-slider">
             <div class="compare-slider__illustration-wrapper">
-              <div class="compare-slider__illustration--before"></div>
-              <div class="compare-slider__illustration--after visually-hidden"></div>
+              <div class="compare-slider__illustration compare-slider__illustration--before">
+                <img class="compare-slider__cat-before" src="img/cat-before-mobile.png" alt="Кот до">
+              </div>
+              <div class="compare-slider__illustration compare-slider__illustration--after">
+                <img class="compare-slider__cat-after" src="img/cat-after-mobile.png" alt="Кот после">
+              </div>
             </div>
             <div class="compare-slider__toggle-wrapper">
               <button class="compare-slider__button compare-slider__button--before" type="button">Было</button>
@@ -117,24 +116,21 @@
             </div>
           </div>
         </div>
-        <div class="example__background"></div>
       </section>
     </main>
     <footer class="page-footer">
       <section class="page-footer__contacts contacts contacts--index">
         <div class="contacts__wrapper">
-          <div class="contacts__inner-container">
-            <h3 class="visually-hidden">Контакты</h3>
-            <p class="contacts__caption">Приглашаем <br> к&nbsp;сотрудничеству дилеров!</p>
-            <address class="contacts__address">
-              ул.&nbsp;Большая Конюшенная,&nbsp;д.&nbsp;19/8 Санкт-&nbsp;Петербург
-            </address>
-          </div>
-        </div>
-        <div class="contacts__map">
-          <iframe src="" width="100%" height="100%"></iframe>
+          <h3 class="visually-hidden">Контакты</h3>
+          <p class="contacts__caption">Приглашаем <br> к&nbsp;сотрудничеству дилеров!</p>
+          <address class="contacts__address">
+            ул.&nbsp;Большая Конюшенная,&nbsp;д.&nbsp;19/8 Санкт-&nbsp;Петербург
+          </address>
         </div>
       </section>
+      <div class="page-footer__map-wrapper">
+        <iframe class="page-footer__map" src="" width="100%" height="100%"></iframe>
+      </div>
       <div class="page-footer__wrapper">
         <a class="page-footer__logo">
           <img class="page-footer__logo-img" src="img/logo-text.svg" width="128" height="24" alt="Логотип Кэт энерджи">

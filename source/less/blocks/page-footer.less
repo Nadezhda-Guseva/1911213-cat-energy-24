@@ -4,21 +4,33 @@
 }
 
 .page-footer__wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 280px;
+  width: @wrapper-mobile;
   margin: auto;
 
   @media (min-width: @width-tablet) {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 708px;
+    width: @wrapper-tablet;
     margin: 56px auto;
   }
 
   @media (min-width: @width-desktop) {
-    width: 1220px;
+    width: @wrapper-desktop;
   }
+}
+
+.page-footer__map-wrapper {
+  height: 362px;
+
+  @media (min-width: @width-tablet) {
+    height: 400px;
+  }
+}
+
+.page-footer__map {
+  margin: 0;
+  border: none;
 }
 
 .page-footer__logo {

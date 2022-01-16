@@ -1,17 +1,17 @@
 .categories__wrapper {
   display: flex;
   flex-direction: column;
-  width: 280px;
+  width: @wrapper-mobile;
   margin: auto;
 
   @media (min-width: @width-tablet) {
-    width: 708px;
+    width: @wrapper-tablet;
   }
 
   @media (min-width: @width-desktop) {
     flex-direction: row;
     justify-content: space-between;
-    width: 1220px;
+    width: @wrapper-desktop;
     gap: 80px;
   }
 }
