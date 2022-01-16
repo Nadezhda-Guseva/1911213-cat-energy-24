@@ -1,21 +1,110 @@
 .main-header {
-  background-color: @white;
+  position: relative;
+  z-index: 1;
   color: @white;
-  background-image: url("../img/bg-main-header.jpg");
-  background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 302px;
+    background-color: @primary-hover;
+    background-image: url("../img/bg-main-header.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    @media (min-width: @width-tablet) {
+      display: none;
+    }
+
+    @media (min-width: @width-desktop) {
+      top: -200px;
+      bottom: 0;
+      left: 50%;
+      display: block;
+      width: 50%;
+      height: auto;
+      background-position: left bottom;
+    }
+  }
+}
+
+.main-header__wrapper {
+  z-index: 1;
+  width: @wrapper-mobile;
+  margin: auto;
   padding-top: 28px;
+
+  @media (min-width: @width-tablet) {
+    width: @wrapper-tablet;
+    height: 840px;
+    padding-top: 56px;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: @wrapper-desktop;
+    height: 568px;
+    padding-top: 100px;
+  }
 }
 
 .main-header__title {
+  margin-bottom: 24px;
   text-align: center;
   color: @white;
+
+  @media (min-width: @width-tablet) {
+    width: 414px;
+    margin-left: 86px;
+    margin-bottom: 40px;
+    text-align: left;
+    color: @black;
+  }
 }
 
 .main-header__caption {
+  margin: 0;
+  margin-bottom: 30px;
   font-family: @accent-font;
   font-size: 14px;
-  font-weight: 400;
   line-height: 14px;
-  text-transform: uppercase;
+  font-weight: 400;
   text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: @width-tablet) {
+    margin-left: 86px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    color: @black;
+  }
+}
+
+.main-header__image {
+  @media (min-width: @width-tablet) {
+    position: absolute;
+    top: 250px;
+    z-index: -1;
+    width: @wrapper-tablet;
+  }
+
+  @media (min-width: @width-desktop) {
+    position: absolute;
+    top: 100px;
+    left: 57%;
+    transform: translateX(-250px);
+    width: 500px;
+  }
+}
+
+.main-header__button {
+  @media (min-width: @width-tablet) {
+    width: 192px;
+    margin-left: 86px;
+  }
 }

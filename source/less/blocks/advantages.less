@@ -1,13 +1,119 @@
+.advantages {
+  background: transparent;
+}
+
+.advantages__wrapper {
+  width: @wrapper-mobile;
+  margin: auto;
+
+  @media (min-width: @width-tablet) {
+    width: @wrapper-tablet;
+    min-height: 670px;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: @wrapper-desktop;
+    min-height: 370px;
+  }
+}
+
 .advantages__list {
   margin: 0;
   padding: 0;
+
+  @media (min-width: @width-tablet) {
+    display: grid;
+    grid-template-columns: 248px 248px;
+    column-gap: 136px;
+    row-gap: 90px;
+  }
+
+  @media (min-width: @width-desktop) {
+    display: grid;
+    grid-template-columns: 245px 245px 245px 245px;
+    column-gap: 80px;
+    row-gap: 90px;
+  }
 }
 
 .advantages__item {
-  list-style-type: none;
+  position: relative;
+  display: grid;
+  grid-template-columns: 60px auto;
+  gap: 20px;
   padding-bottom: 20px;
+  list-style-type: none;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  &::before {
+    width: 32px;
+    height: 32px;
+    padding: 14px;
+    background-color: @primary;
+  }
+
+  &--healthy::before {
+    content: url("../img/icon-leaf.svg");
+  }
+
+  &--easy::before {
+    content: url("../img/icon-tub.svg");
+  }
+
+  &--replace::before {
+    content: url("../img/icon-eat.svg");
+  }
+
+  &--result::before {
+    content: url("../img/icon-alarm.svg");
+  }
+
+  @media (min-width: @width-tablet) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &::before {
+      padding: 24px;
+    }
+
+    &::after {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      z-index: -1;
+      font-family: @accent-font;
+      font-size: 280px;
+      line-height: 280px;
+      font-weight: 400;
+      color: @bg-light;
+    }
+
+    &--healthy::after {
+      content: "1";
+    }
+
+    &--easy::after {
+      content: "2";
+    }
+
+    &--replace::after {
+      content: "3";
+    }
+
+    &--result::after {
+      content: "4";
+    }
+  }
 }
 
 .advantages__title {
   margin-bottom: 40px;
+
+  @media (min-width: @width-tablet) {
+    margin-bottom: 70px;
+  }
 }
