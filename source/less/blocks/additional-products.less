@@ -1,3 +1,23 @@
+.additional-products__wrapper {
+  width: @wrapper-mobile;
+  margin: auto;
+
+  @media (min-width: @width-tablet) {
+    width: @wrapper-tablet;
+  }
+
+  @media (min-width: @width-desktop) {
+    position: relative;
+    width: @wrapper-desktop;
+  }
+}
+
+.additional-products__card {
+  &:last-of-type {
+    margin-bottom: 36px;
+  }
+}
+
 .additional-products__title {
   margin: 0;
   margin-bottom: 36px;
@@ -6,12 +26,12 @@
   line-height: 26px;
   font-weight: 700;
   color: @black;
-}
 
-.additional-products__list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  @media (min-width: @width-tablet) {
+    margin-bottom: 80px;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .additional-products__banner {
@@ -24,6 +44,58 @@
   text-decoration: none;
   color: @white;
   background-color: @primary;
-  background-image: url("../img/catalog-banner.jpg");
+  background-image: url("../img/catalog-banner-mobile.jpg");
   background-repeat: no-repeat;
+
+  @media (min-width: @width-tablet) {
+    height: 200px;
+    background-image: url("../img/catalog-banner-tablet.jpg");
+  }
+
+  @media (min-width: @width-desktop) {
+    position: absolute;
+    top: 116px;
+    right: 0;
+    width: 244px;
+    height: 288px;
+    background-image: url("../img/catalog-banner-desktop.jpg");
+  }
+}
+
+.additional-products__caption {
+  &::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    padding-top: 58px;
+    padding-bottom: 48px;
+    background-image: url("../img/icon-gift.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @width-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 140px;
+    text-align: left;
+
+    &::before {
+      margin: 0;
+      padding: 60px 76px;
+    }
+  }
+
+  @media (min-width: @width-desktop) {
+    display: block;
+    padding: 0;
+    text-align: center;
+
+    &::before {
+      padding: 56px 82px 46px;
+    }
+  }
 }

@@ -1,17 +1,30 @@
-.text-field__label {
-  font-family: @accent-font;
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 400;
-  color: @text-dark;
-  text-transform: uppercase;
+.text-field {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
+.text-field__label,
 .text-field__input {
   font-family: @accent-font;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
-  color: @text-dark;
   text-transform: uppercase;
+  color: @text-dark;
+
+  @media (min-width: @width-tablet) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.text-field__label {
+  min-width: max-content;
+}
+
+.text-field__input {
+  flex-grow: 1;
+  padding: 14px 16px;
+  border: 1px solid @border-medium;
 }

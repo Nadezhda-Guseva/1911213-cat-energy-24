@@ -3,8 +3,28 @@
   font-family: @accent-font;
 }
 
+.program-selection__wrapper {
+  width: @wrapper-mobile;
+  margin: auto;
+
+  @media (min-width: @width-tablet) {
+    width: 630px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: @width-desktop) {
+    position: relative;
+    width: @wrapper-desktop;
+    padding: 0;
+  }
+}
+
 .program-selection__title {
   margin-bottom: 38px;
+
+  @media (min-width: @width-tablet) {
+    margin-bottom: 54px;
+  }
 }
 
 .program-selection__text {
@@ -15,4 +35,11 @@
   font-weight: 400;
   text-transform: uppercase;
   color: @black;
+
+  @media (min-width: @width-tablet) {
+    width: 344px;
+    margin-bottom: 66px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

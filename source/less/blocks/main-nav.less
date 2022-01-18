@@ -50,6 +50,14 @@
   padding-bottom: 24px;
   border-top: 1px solid @border-light;
 
+  &:last-of-type {
+    border-bottom: 1px solid @border-light;
+
+    @media (min-width: @width-tablet) {
+      border-bottom: none;
+    }
+  }
+
   @media (min-width: @width-tablet) {
     padding-left: 34px;
     border-top: none;
@@ -72,5 +80,14 @@
   @media (min-width: @width-tablet) {
     padding-left: 34px;
     border-top: none;
+  }
+
+  &--inner {
+    .main-nav__link {
+      @media (min-width: @width-desktop) {
+        color: @black;
+        text-decoration-color: @primary;
+      }
+    }
   }
 }
