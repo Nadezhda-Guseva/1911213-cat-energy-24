@@ -1,8 +1,79 @@
+.form__wrapper {
+  @media (min-width: @width-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+
 .form__group {
   margin: 0;
+  margin-bottom: 26px;
   padding: 0;
-  padding-bottom: 24px;
   border: none;
+
+  &--purpose {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 24px 20px 24px;
+    border: 1px solid @border-light;
+  }
+
+  @media (min-width: @width-tablet) {
+    margin-bottom: 72px;
+
+    &:last-of-type {
+      margin-bottom: 54px;
+    }
+
+    &--purpose {
+      margin-left: 0;
+      margin-right: 0;
+      padding: 20px 28px 20px;
+    }
+
+    &--additionally {
+      .form__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 60px;
+        row-gap: 32px;
+      }
+
+      .form__item {
+        margin-bottom: 0;
+      }
+
+      .form__legend {
+        margin-bottom: 56px;
+      }
+    }
+  }
+
+  @media (min-width: @width-desktop) {
+    &--contacts {
+      grid-column: 1 / -1;
+
+      .form__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 80px;
+      }
+    }
+
+    &--comment {
+      grid-column: 1 / -1;
+    }
+
+    &--additionally {
+      grid-column: 1 / -1;
+
+      .form__list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 80px;
+      }
+    }
+  }
 }
 
 .form__list {
@@ -11,17 +82,71 @@
   list-style-type: none;
 }
 
+.form__item {
+  width: 100%;
+  margin-bottom: 14px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @width-tablet) {
+    margin-bottom: 20px;
+  }
+}
+
 .form__legend {
+  margin-bottom: 34px;
   font-size: 24px;
   line-height: 26px;
   font-weight: 700;
   color: @black;
+
+  @media (min-width: @width-tablet) {
+    margin-bottom: 76px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.form__textarea {
+  width: calc(100% - 26px);
+  min-height: 122px;
+
+  @media (min-width: @width-tablet) {
+    min-height: 150px;
+  }
 }
 
 .form__small {
+  display: block;
+  width: 100%;
   font-family: @basic-font;
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
+  text-align: center;
   color: @black;
+
+  @media (min-width: @width-tablet) {
+    display: inline;
+    text-align: left;
+  }
+}
+
+.form__button {
+  width: 100%;
+  margin-bottom: 22px;
+
+  @media (min-width: @width-tablet) {
+    display: inline-block;
+    width: 284px;
+    margin-right: 60px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 570px;
+    margin-right: 80px;
+  }
 }

@@ -1,10 +1,22 @@
 .page-main {
   flex-grow: 1;
-  margin: 0;
   background-color: @white;
 
   @media (min-width: @width-tablet) {
     z-index: -1;
+  }
+}
+
+.page-main__wrapper {
+  width: @wrapper-mobile;
+  margin: auto;
+
+  @media (min-width: @width-tablet) {
+    width: @wrapper-tablet;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: @wrapper-desktop;
   }
 }
 
@@ -36,8 +48,28 @@
 
 .page-main__additional-products {
   margin-bottom: 36px;
+
+  @media (min-width: @width-tablet) {
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: 86px;
+  }
 }
 
 .page-main__program-selection {
   margin-bottom: 32px;
+
+  @media (min-width: @width-tablet) {
+    margin-bottom: 72px;
+  }
+}
+
+.page-main__product-catalog {
+  margin: 0;
+
+  @media (min-width: @width-tablet) {
+    margin-bottom: 68px;
+  }
 }

@@ -1,3 +1,21 @@
+.additional-products__wrapper {
+  @media (min-width: @width-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    gap: 80px;
+  }
+}
+
+.additional-products__card {
+  &:last-of-type {
+    margin-bottom: 36px;
+
+    @media (min-width: @width-desktop) {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .additional-products__title {
   margin: 0;
   margin-bottom: 36px;
@@ -6,17 +24,17 @@
   line-height: 26px;
   font-weight: 700;
   color: @black;
-}
 
-.additional-products__list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  @media (min-width: @width-tablet) {
+    margin-bottom: 80px;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .additional-products__banner {
   display: block;
-  height: 288px;
+  min-height: 288px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -24,6 +42,55 @@
   text-decoration: none;
   color: @white;
   background-color: @primary;
-  background-image: url("../img/catalog-banner.jpg");
+  background-image: url("../img/catalog-banner-mobile.jpg");
   background-repeat: no-repeat;
+
+  @media (min-width: @width-tablet) {
+    min-height: 200px;
+    background-image: url("../img/catalog-banner-tablet.jpg");
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 244px;
+    height: 100%;
+    background-image: url("../img/catalog-banner-desktop.jpg");
+  }
+}
+
+.additional-products__caption {
+  &::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    padding-top: 58px;
+    padding-bottom: 48px;
+    background-image: url("../img/icon-gift.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @width-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 140px;
+    text-align: left;
+
+    &::before {
+      margin: 0;
+      padding: 60px 76px;
+    }
+  }
+
+  @media (min-width: @width-desktop) {
+    display: block;
+    padding: 0;
+    text-align: center;
+
+    &::before {
+      padding: 56px 82px 46px;
+    }
+  }
 }
