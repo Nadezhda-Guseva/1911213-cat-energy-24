@@ -1,7 +1,8 @@
 .text-field {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: max-content 1fr;
   gap: 14px;
+  align-items: center;
 }
 
 .text-field__label,
@@ -24,7 +25,6 @@
 }
 
 .text-field__input {
-  flex-grow: 1;
   padding: 14px 16px;
   border: 1px solid @border-medium;
 }

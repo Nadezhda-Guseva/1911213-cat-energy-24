@@ -1,10 +1,18 @@
+.form__wrapper {
+  @media (min-width: @width-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+
 .form__group {
   margin: 0;
   margin-bottom: 26px;
   padding: 0;
   border: none;
 
-  &--radio {
+  &--purpose {
     margin-left: -20px;
     margin-right: -20px;
     padding: 24px 20px 24px;
@@ -18,16 +26,16 @@
       margin-bottom: 54px;
     }
 
-    &--radio {
+    &--purpose {
       margin-left: 0;
       margin-right: 0;
-      padding: 22px 28px 22px;
+      padding: 20px 28px 20px;
     }
 
     &--additionally {
       .form__list {
         display: grid;
-        grid-template-columns: 284px 284px;
+        grid-template-columns: 1fr 1fr;
         column-gap: 60px;
         row-gap: 32px;
       }
@@ -43,28 +51,25 @@
   }
 
   @media (min-width: @width-desktop) {
-    &:first-of-type {
-      width: 570px;
-    }
-
-    &--radio {
-      position: absolute;
-      top: 240px;
-      right: 0;
-      width: 514px;
-    }
-
     &--contacts {
+      grid-column: 1 / -1;
+
       .form__list {
         display: grid;
-        grid-template-columns: 570px 570px;
+        grid-template-columns: 1fr 1fr;
         column-gap: 80px;
       }
     }
 
+    &--comment {
+      grid-column: 1 / -1;
+    }
+
     &--additionally {
+      grid-column: 1 / -1;
+
       .form__list {
-        grid-template-columns: 245px 245px 245px 245px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         column-gap: 80px;
       }
     }
@@ -78,6 +83,7 @@
 }
 
 .form__item {
+  width: 100%;
   margin-bottom: 14px;
 
   &:last-of-type {
@@ -104,16 +110,11 @@
 }
 
 .form__textarea {
-  width: 252px;
+  width: calc(100% - 26px);
   min-height: 122px;
 
   @media (min-width: @width-tablet) {
-    width: 602px;
     min-height: 150px;
-  }
-
-  @media (min-width: @width-desktop) {
-    width: 1192px;
   }
 }
 

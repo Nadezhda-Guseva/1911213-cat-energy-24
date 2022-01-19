@@ -1,20 +1,18 @@
 .additional-products__wrapper {
-  width: @wrapper-mobile;
-  margin: auto;
-
-  @media (min-width: @width-tablet) {
-    width: @wrapper-tablet;
-  }
-
   @media (min-width: @width-desktop) {
-    position: relative;
-    width: @wrapper-desktop;
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    gap: 80px;
   }
 }
 
 .additional-products__card {
   &:last-of-type {
     margin-bottom: 36px;
+
+    @media (min-width: @width-desktop) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -36,7 +34,7 @@
 
 .additional-products__banner {
   display: block;
-  height: 288px;
+  min-height: 288px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -48,16 +46,13 @@
   background-repeat: no-repeat;
 
   @media (min-width: @width-tablet) {
-    height: 200px;
+    min-height: 200px;
     background-image: url("../img/catalog-banner-tablet.jpg");
   }
 
   @media (min-width: @width-desktop) {
-    position: absolute;
-    top: 116px;
-    right: 0;
     width: 244px;
-    height: 288px;
+    height: 100%;
     background-image: url("../img/catalog-banner-desktop.jpg");
   }
 }

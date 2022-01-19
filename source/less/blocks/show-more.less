@@ -1,6 +1,29 @@
 .show-more {
+  position: relative;
   padding-top: 24px;
   padding-bottom: 25px;
+
+  @media (max-width: @width-mobile-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 300%;
+      height: 1px;
+      background-color: @border-light;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -100%;
+      width: 300%;
+      height: 1px;
+      background-color: @border-light;
+    }
+  }
 
   @media (min-width: @width-tablet) {
     padding-top: 52px;
