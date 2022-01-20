@@ -76,6 +76,10 @@
     flex-direction: column;
     gap: 30px;
 
+    span {
+      z-index: 2;
+    }
+
     &::before {
       padding: 24px;
     }
@@ -84,7 +88,6 @@
       position: absolute;
       top: -40px;
       right: 0;
-      z-index: -1;
       font-family: @accent-font;
       font-size: 280px;
       line-height: 280px;

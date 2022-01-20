@@ -6,6 +6,20 @@
   @media (min-width: @width-tablet) {
     gap: 20px;
   }
+
+  &:hover {
+    .copyright__icon {
+      fill: @primary;
+    }
+  }
+
+  &:active {
+    opacity: 30%;
+
+    .copyright__icon {
+      fill: @primary;
+    }
+  }
 }
 
 .copyright__link {
@@ -14,4 +28,13 @@
   line-height: 18px;
   text-decoration: none;
   color: @text-dark;
+
+  &--text {
+    padding-top: 6px;
+    padding-bottom: 10px;
+  }
+}
+
+.copyright__icon {
+  fill: @text-dark;
 }

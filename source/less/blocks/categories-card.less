@@ -37,6 +37,10 @@
 }
 
 .categories-card__button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
   font-family: @accent-font;
   font-size: 16px;
   line-height: 16px;
@@ -45,7 +49,28 @@
   text-decoration: none;
   color: @black;
 
+  &::after {
+    content: url("../img/icon-arrow-small.svg");
+    height: 32px;
+    width: 32px;
+  }
+
+  &:hover {
+    &::after {
+      content: url("../img/icon-arrow-big.svg");
+    }
+  }
+
+  &:active {
+    opacity: 30%;
+
+    &::after {
+      content: url("../img/icon-arrow-big.svg");
+    }
+  }
+
   @media (min-width: @width-tablet) {
+    gap: 28px;
     font-size: 20px;
     line-height: 20px;
   }

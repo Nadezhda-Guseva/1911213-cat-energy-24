@@ -19,13 +19,13 @@
     display: flex;
     align-items: top;
     width: @wrapper-tablet;
-    margin: auto;
     padding: 20px;
   }
 
   @media (min-width: @width-desktop) {
     width: @wrapper-desktop;
-    margin: 0 auto;
+    margin-top: 50px;
+    padding: 0;
   }
 }
 
@@ -56,15 +56,24 @@
 .page-header__logo {
   display: block;
   padding: 12px 20px 17px;
+  cursor: pointer;
 
   img {
     display: block;
     width: 256px;
   }
 
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+
   @media (min-width: @width-tablet) {
-    display: flex;
-    align-items: center;
+    align-self: center;
+    z-index: 2;
     margin-right: auto;
     padding: 0;
   }
@@ -84,6 +93,7 @@
   background-repeat: no-repeat;
   background-position: center;
   border: none;
+  cursor: pointer;
 
   &--no-js,
   &--opened {
