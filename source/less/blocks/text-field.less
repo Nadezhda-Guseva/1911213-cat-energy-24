@@ -3,6 +3,26 @@
   grid-template-columns: max-content 1fr;
   gap: 14px;
   align-items: center;
+
+  &:hover {
+    .text-field__input {
+      border: 1px solid @border-medium;
+    }
+  }
+
+  &:active {
+    .text-field__input {
+      margin: -1px;
+      border: 2px solid @text-dark;
+    }
+  }
+
+  &--error {
+    .text-field__input {
+      margin: -1px;
+      border: 2px solid @status-error;
+    }
+  }
 }
 
 .text-field__label,
@@ -26,5 +46,5 @@
 
 .text-field__input {
   padding: 14px 16px;
-  border: 1px solid @border-medium;
+  border: 1px solid @border-input;
 }
