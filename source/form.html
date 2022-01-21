@@ -36,7 +36,7 @@
         </nav>
       </div>
     </header>
-    <main class="page-main">
+    <main class="page-main page-main--inner">
       <section class="page-main__program-selection program-selection">
         <div class="program-selection__wrapper">
           <h1 class="program-selection__title title">Подбор программы</h1>
@@ -99,7 +99,9 @@
                 </ul>
               </fieldset>
               <fieldset class="form__group form__group--contacts">
-                <legend class="form__legend">Контактные данные (владельца кота)</legend>
+                <legend class="form__legend">
+                  <span>Контактные данные <br> (владельца кота)</span>
+                </legend>
                 <ul class="form__list">
                   <li class="form__item form__item--e-mail">
                     <div class="text-field">
@@ -120,11 +122,15 @@
                 </ul>
               </fieldset>
               <fieldset class="form__group form__group--comment">
-                <legend class="form__legend">Комментарий</legend>
+                <legend class="form__legend">
+                  <span>Комментарий</span>
+                </legend>
                 <textarea class="form__textarea textarea" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
               </fieldset>
               <fieldset class=" form__group form__group--additionally">
-                <legend class="form__legend">Дополнительно</legend>
+                <legend class="form__legend">
+                  <span>Дополнительно</span>
+                </legend>
                 <ul class="form__list form__list">
                   <li class="form__item">
                     <label class="control">

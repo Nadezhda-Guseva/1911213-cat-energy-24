@@ -16,13 +16,17 @@
   margin: auto;
 
   @media (min-width: @width-tablet) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 174px 1fr;
+    gap: 60px;
     align-items: top;
     width: @wrapper-tablet;
     padding: 20px;
   }
 
   @media (min-width: @width-desktop) {
+    grid-template-columns: 200px 1fr;
+    gap: 80px;
     width: @wrapper-desktop;
     margin-top: 50px;
     padding: 0;
@@ -45,11 +49,14 @@
   @media (min-width: @width-tablet) {
     position: static;
     display: block;
-    width: @wrapper-tablet;
   }
 
   @media (min-width: @width-desktop) {
     margin-left: auto;
+
+    &--index {
+      max-width: 610px;
+    }
   }
 }
 

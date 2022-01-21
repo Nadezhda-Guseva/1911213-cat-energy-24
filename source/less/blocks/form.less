@@ -96,16 +96,58 @@
 }
 
 .form__legend {
+  position: relative;
+  display: block;
+  width: 100%;
   margin-bottom: 34px;
   font-size: 24px;
   line-height: 26px;
   font-weight: 700;
   color: @black;
 
+  span {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: max-content;
+    margin-left: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: @white;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: -244px;
+    right: -244px;
+    z-index: 0;
+    height: 2px;
+    background-color: @primary;
+  }
+
+
   @media (min-width: @width-tablet) {
     margin-bottom: 76px;
     font-size: 36px;
     line-height: 36px;
+
+    span {
+      margin-left: -40px;
+      padding-left: 40px;
+      padding-right: 40px;
+
+      br {
+        display: none;
+      }
+    }
+
+    &::before {
+      top: 20px;
+      left: -335px;
+      right: -335px;
+    }
   }
 }
 

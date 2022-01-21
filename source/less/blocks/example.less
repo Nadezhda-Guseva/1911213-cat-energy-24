@@ -94,16 +94,28 @@
   text-transform: uppercase;
   color: @black;
 
+  br {
+    display: none;
+  }
+
   @media (min-width: @width-tablet) {
-    width: 174px;
+    min-width: max-content;
     font-size: 20px;
     line-height: 28px;
     text-align: right;
+
+    br {
+      display: inline;
+    }
   }
 
   @media (min-width: @width-desktop) {
     width: 366px;
     text-align: left;
+
+    br {
+      display: none;
+    }
   }
 }
 
