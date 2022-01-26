@@ -14,6 +14,21 @@
     }
   }
 
+  &:focus-within {
+    outline: none;
+
+    .control__mark {
+      outline: 4px solid rgba(104, 183, 56, 0.5);
+    }
+
+    .control__label {
+      text-decoration: underline;
+      text-decoration-color: @black;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+  }
+
   &:active {
     opacity: 60%;
   }

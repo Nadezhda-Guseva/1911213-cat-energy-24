@@ -26,15 +26,15 @@
 
   @media (min-width: @width-tablet) {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 130px;
+    grid-template-columns: 128px 1fr 164px;
+    gap: 60px;
     width: @wrapper-tablet;
     margin: 56px auto;
   }
 
   @media (min-width: @width-desktop) {
     width: @wrapper-desktop;
-    gap: 380px;
+    gap: 80px;
   }
 }
 
@@ -67,6 +67,16 @@
 
   &:hover {
     opacity: 80%;
+  }
+
+  &:focus {
+    outline: none;
+
+    .page-footer__logo-img {
+      border-radius: 4px;
+      outline: 4px solid rgba(104, 183, 56, 0.5);
+      outline-offset: 8px;
+    }
   }
 
   &:active {

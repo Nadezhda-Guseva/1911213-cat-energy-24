@@ -10,10 +10,24 @@
     }
   }
 
+  &:focus-within {
+    .text-field__input {
+      outline: 4px solid rgba(104, 183, 56, 0.5);
+    }
+
+    &::after {
+      background-color: @primary;
+    }
+  }
+
   &:active {
     .text-field__input {
       margin: -1px;
       border: 2px solid @text-dark;
+    }
+
+    &::after {
+      background-color: @primary;
     }
   }
 
@@ -21,6 +35,54 @@
     .text-field__input {
       margin: -1px;
       border: 2px solid @status-error;
+    }
+
+    &::after {
+      background-color: @status-error;
+    }
+  }
+
+  &--e-mail {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 14px;
+      width: 20px;
+      height: 20px;
+      mask-image: url("../img/icon-email.svg");
+      mask-repeat: no-repeat;
+      mask-size: 20px 20px;
+      mask-position: center;
+      background-color: @black;
+
+      @media (min-width: @width-tablet) {
+        right: 18px;
+      }
+    }
+  }
+
+  &--phone {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 12px;
+      width: 20px;
+      height: 20px;
+      mask-image: url("../img/icon-phone.svg");
+      mask-repeat: no-repeat;
+      mask-size: 20px 20px;
+      mask-position: center;
+      background-color: @black;
+
+      @media (min-width: @width-tablet) {
+        right: 16px;
+      }
     }
   }
 }

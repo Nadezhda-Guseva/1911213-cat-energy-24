@@ -1,25 +1,19 @@
 .categories__wrapper {
   display: flex;
   flex-direction: column;
+  gap: 20px;
   width: @wrapper-mobile;
   margin: auto;
 
   @media (min-width: @width-tablet) {
+    gap: 30px;
     width: @wrapper-tablet;
   }
 
   @media (min-width: @width-desktop) {
-    flex-direction: row;
-    justify-content: space-between;
-    width: @wrapper-desktop;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 80px;
-  }
-}
-
-.categories__card {
-  margin-bottom: 20px;
-
-  @media (min-width: @width-tablet) {
-    margin-bottom: 30px;
+    width: @wrapper-desktop;
   }
 }

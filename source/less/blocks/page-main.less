@@ -1,33 +1,17 @@
 .page-main {
   flex-grow: 1;
   background-color: @white;
-  overflow: hidden;
-
-  @media (min-width: @width-desktop) {
-    margin-top: -120px;
-
-    &--inner {
-      margin-top: 64px;
-    }
-  }
-}
-
-.page-main__wrapper {
-  width: @wrapper-mobile;
-  margin: auto;
-
-  @media (min-width: @width-tablet) {
-    width: @wrapper-tablet;
-  }
-
-  @media (min-width: @width-desktop) {
-    width: @wrapper-desktop;
-  }
 }
 
 .page-main__categories {
+  margin-bottom: 20px;
+
   @media (min-width: @width-tablet) {
-    margin-bottom: 24px;
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: 70px;
   }
 }
 
@@ -43,11 +27,7 @@
   margin-bottom: 48px;
 
   @media (min-width: @width-tablet) {
-    margin-bottom: 60px;
-  }
-
-  @media (min-width: @width-desktop) {
-    margin-bottom: 70px;
+    margin-bottom: 104px;
   }
 }
 
@@ -65,6 +45,7 @@
 
 .page-main__program-selection {
   margin-bottom: 32px;
+  overflow: hidden;
 
   @media (min-width: @width-tablet) {
     margin-bottom: 72px;

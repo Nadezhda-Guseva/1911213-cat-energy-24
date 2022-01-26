@@ -3,11 +3,17 @@
   border-bottom: 1px solid @border-light;
 
   @media (min-width: @width-tablet) {
+    margin-bottom: 62px;
     border-bottom: none;
   }
 
   @media (min-width: @width-desktop) {
+    margin-bottom: 72px;
     background: transparent;
+
+    &--index {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -21,7 +27,8 @@
     gap: 60px;
     align-items: top;
     width: @wrapper-tablet;
-    padding: 20px;
+    margin-top: 42px;
+    padding: 0;
   }
 
   @media (min-width: @width-desktop) {
@@ -29,7 +36,6 @@
     gap: 80px;
     width: @wrapper-desktop;
     margin-top: 50px;
-    padding: 0;
   }
 }
 
@@ -62,7 +68,7 @@
 
 .page-header__logo {
   display: block;
-  padding: 12px 20px 17px;
+  padding: 12px 0 17px;
   cursor: pointer;
 
   img {
@@ -72,6 +78,12 @@
 
   &:hover {
     opacity: 80%;
+  }
+
+  &:focus {
+    border-radius: 4px;
+    outline: 4px solid rgba(104, 183, 56, 0.5);
+    outline-offset: 8px;
   }
 
   &:active {
@@ -89,7 +101,7 @@
 .page-header__toggle {
   position: absolute;
   top: 20px;
-  left: calc(50% + 100px);
+  left: calc(50% + 116px);
   display: block;
   width: 24px;
   height: 24px;
