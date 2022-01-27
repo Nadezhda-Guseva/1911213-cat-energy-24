@@ -17,8 +17,8 @@
 }
 
 .contacts__wrapper {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
   width: @wrapper-mobile;
   margin: auto;
@@ -26,13 +26,11 @@
   padding-bottom: 26px;
 
   @media (min-width: @width-tablet) {
-    gap: 310px;
     width: @wrapper-tablet;
     padding: 66px 42px 62px;
   }
 
   @media (min-width: @width-desktop) {
-    gap: 96px;
     width: 406px;
     margin: 0;
     padding: 66px 76px;

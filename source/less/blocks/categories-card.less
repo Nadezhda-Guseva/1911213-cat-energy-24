@@ -10,15 +10,18 @@
 
   &--slimming {
     &::before {
-      content: url("../img/cat-slimming-mobile.svg");
+      content: "";
       position: absolute;
       top: 22px;
       left: 22px;
       width: 53px;
       height: 50px;
+      background-image: url("../img/cat-slimming.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
 
       @media (min-width: @width-tablet) {
-        content: url("../img/cat-slimming-tablet.svg");
         top: 80px;
         left: 446px;
         width: 200px;
@@ -26,7 +29,6 @@
       }
 
       @media (min-width: @width-desktop) {
-        content: url("../img/cat-slimming-desktop.svg");
         top: 40px;
         left: 52px;
         width: 100px;
@@ -37,15 +39,18 @@
 
   &--weight-gain {
     &::before {
-      content: url("../img/cat-weight-gain-mobile.svg");
+      content: "";
       position: absolute;
       top: 24px;
       left: 12px;
       width: 57px;
       height: 50px;
+      background-image: url("../img/cat-weight-gain.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
 
       @media (min-width: @width-tablet) {
-        content: url("../img/cat-weight-gain-tablet.svg");
         top: 80px;
         left: 412px;
         width: 268px;
@@ -53,7 +58,6 @@
       }
 
       @media (min-width: @width-desktop) {
-        content: url("../img/cat-weight-gain-desktop.svg");
         top: 46px;
         left: 32px;
         width: 100px;
@@ -123,14 +127,14 @@
   color: @black;
 
   &::after {
-    content: url("../img/icon-arrow-small.svg");
+    content: url("../img/icons/icon-arrow-small.svg");
     height: 32px;
     width: 32px;
   }
 
   &:hover {
     &::after {
-      content: url("../img/icon-arrow-big.svg");
+      content: url("../img/icons/icon-arrow-big.svg");
     }
   }
 
