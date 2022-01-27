@@ -1,18 +1,73 @@
 .categories-card {
+  position: relative;
   padding: 22px;
   background-color: @bg-light;
 
   @media (min-width: @width-tablet) {
     padding: 52px;
+    padding-top: 68px;
   }
 
-  @media (min-width: @width-desktop) {
-    width: 570px;
+  &--slimming {
+    &::before {
+      content: url("../img/cat-slimming-mobile.svg");
+      position: absolute;
+      top: 22px;
+      left: 22px;
+      width: 53px;
+      height: 50px;
+
+      @media (min-width: @width-tablet) {
+        content: url("../img/cat-slimming-tablet.svg");
+        top: 80px;
+        left: 446px;
+        width: 200px;
+        height: 211px;
+      }
+
+      @media (min-width: @width-desktop) {
+        content: url("../img/cat-slimming-desktop.svg");
+        top: 40px;
+        left: 52px;
+        width: 100px;
+        height: 106px;
+      }
+    }
+  }
+
+  &--weight-gain {
+    &::before {
+      content: url("../img/cat-weight-gain-mobile.svg");
+      position: absolute;
+      top: 24px;
+      left: 12px;
+      width: 57px;
+      height: 50px;
+
+      @media (min-width: @width-tablet) {
+        content: url("../img/cat-weight-gain-tablet.svg");
+        top: 80px;
+        left: 412px;
+        width: 268px;
+        height: 200px;
+      }
+
+      @media (min-width: @width-desktop) {
+        content: url("../img/cat-weight-gain-desktop.svg");
+        top: 46px;
+        left: 32px;
+        width: 100px;
+        height: 106px;
+      }
+    }
   }
 }
 
-.categories-card__subtitle {
+.categories-card__title {
   margin: 0;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  padding-left: 70px;
   font-family: @accent-font;
   font-size: 24px;
   line-height: 37px;
@@ -21,18 +76,36 @@
   color: @black;
 
   @media (min-width: @width-tablet) {
+    width: 340px;
+    margin-bottom: 24px;
+    padding: 0;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: 74px;
+    padding-top: 14px;
+    padding-left: 162px;
+    width: auto;
   }
 }
 
 .categories-card__text {
-  margin: 22px 0;
+  margin: 0;
+  margin-bottom: 18px;
   padding-bottom: 22px;
   border-bottom: 1px solid @border-light;
 
   @media (min-width: @width-tablet) {
+    width: 340px;
+    margin-bottom: 48px;
+    padding: 0;
     border-bottom: none;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: auto;
   }
 }
 
@@ -59,6 +132,15 @@
     &::after {
       content: url("../img/icon-arrow-big.svg");
     }
+  }
+
+  &:focus {
+    outline: none;
+    transform: translateX(20px);
+    text-decoration: underline;
+    text-decoration-color: @black;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
   }
 
   &:active {

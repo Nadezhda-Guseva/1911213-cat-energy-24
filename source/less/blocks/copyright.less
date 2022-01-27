@@ -13,6 +13,12 @@
     }
   }
 
+  &:focus {
+    border-radius: 4px;
+    outline: 4px solid rgba(104, 183, 56, 0.5);
+    outline-offset: 8px;
+  }
+
   &:active {
     opacity: 30%;
 
@@ -24,17 +30,14 @@
 
 .copyright__link {
   min-width: max-content;
+  padding-top: 6px;
+  padding-bottom: 10px;
   font-size: 16px;
   line-height: 18px;
   text-decoration: none;
   color: @text-dark;
-
-  &--text {
-    padding-top: 6px;
-    padding-bottom: 10px;
-  }
 }
 
 .copyright__icon {
-  fill: @text-dark;
+  fill: @icon-medium;
 }

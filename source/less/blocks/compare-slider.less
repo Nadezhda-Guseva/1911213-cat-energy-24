@@ -17,17 +17,29 @@
   cursor: pointer;
 
   &:hover {
-    border-bottom: 1px solid rgba(2, 0, 0, 0.4);
+    text-decoration-style: solid;
+    text-decoration-color: @black;
+  }
+
+  &:focus {
+    outline: none;
+    text-decoration-style: solid;
+    text-decoration-color: @black;
+    text-decoration-thickness: 2px;
   }
 
   &:active {
-    border-bottom: 1px solid transparent;
+    opacity: 30%;
   }
 
   @media (min-width: @width-tablet) {
     font-size: 20px;
     line-height: 30px;
-    border-bottom: 1px dashed @border-medium;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: @border-medium;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 8px;
   }
 }
 
@@ -39,7 +51,7 @@
 
   @media (min-width: @width-tablet) {
     width: 592px;
-    height: 510px;
+    height: 511px;
     margin-bottom: 40px;
   }
 }
@@ -48,24 +60,16 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 232px;
-
-  &--before {
-    width: 100%;
+}
 
 
-    @media (min-width: @width-tablet) {
-      width: 50%;
-    }
-  }
+.compare-slider__cat-after,
+.compare-slider__cat-before {
+  width: 280px;
+  object-fit: none;
 
-  &--after {
-    width: 0;
-
-    @media (min-width: @width-tablet) {
-      width: 50%;
-      overflow: hidden;
-    }
+  @media (min-width: @width-tablet) {
+    width: 592px;
   }
 }
 
@@ -107,6 +111,10 @@
 
   &:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
+  }
+
+  &:focus {
+    outline: 4px solid rgba(104, 183, 56, 0.5);
   }
 
   &:active {

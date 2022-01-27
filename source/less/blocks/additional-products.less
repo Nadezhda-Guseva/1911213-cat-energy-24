@@ -1,4 +1,21 @@
+.additional-products {
+  overflow: hidden;
+}
+
 .additional-products__wrapper {
+  width: @wrapper-mobile;
+  margin: auto;
+
+  @media (min-width: @width-tablet) {
+    width: @wrapper-tablet;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: @wrapper-desktop;
+  }
+}
+
+.additional-products__card-wrapper {
   @media (min-width: @width-desktop) {
     display: grid;
     grid-template-columns: 1fr 245px;
@@ -17,6 +34,7 @@
 }
 
 .additional-products__title {
+  position: relative;
   margin: 0;
   margin-bottom: 36px;
   font-family: @accent-font;
@@ -25,10 +43,44 @@
   font-weight: 700;
   color: @black;
 
+  span {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: max-content;
+    margin-left: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: @white;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: -244px;
+    right: -244px;
+    z-index: 1;
+    height: 2px;
+    background-color: @primary;
+  }
+
   @media (min-width: @width-tablet) {
     margin-bottom: 80px;
     font-size: 36px;
     line-height: 36px;
+
+    span {
+      margin-left: -40px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    &::before {
+      top: 20px;
+      left: -335px;
+      right: -335px;
+    }
   }
 }
 
@@ -45,6 +97,22 @@
   background-image: url("../img/catalog-banner-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-resolution: @retina-dppx) {
+    background-image: url("../img/catalog-banner-mobile@2x.jpg");
+  }
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:focus {
+    outline: 4px solid rgba(104, 183, 56, 0.5);
+  }
+
+  &:active {
+    opacity: 60%;
+  }
 
   &::before {
     content: "";
@@ -67,6 +135,10 @@
     min-height: 200px;
     background-image: url("../img/catalog-banner-tablet.jpg");
 
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/catalog-banner-tablet@2x.jpg");
+    }
+
     &::before {
       margin: 0;
       padding: 60px 76px;
@@ -77,6 +149,10 @@
     display: block;
     width: 244px;
     background-image: url("../img/catalog-banner-desktop.jpg");
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/catalog-banner-desktop@2x.jpg");
+    }
 
     &::before {
       padding: 56px 82px 46px;

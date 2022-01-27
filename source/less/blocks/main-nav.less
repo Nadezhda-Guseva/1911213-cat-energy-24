@@ -19,6 +19,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 26px;
     justify-content: flex-end;
   }
 }
@@ -41,11 +42,19 @@
     opacity: 60%;
   }
 
+  &:focus {
+    border-radius: 4px;
+    outline: 4px solid rgba(104, 183, 56, 0.5);
+    outline-offset: 4px;
+  }
+
   &:active {
     opacity: 30%;
   }
 
   @media (min-width: @width-tablet) {
+    padding: 8px;
+    padding-top: 12px;
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
@@ -54,6 +63,12 @@
 
   @media (min-width: @width-desktop) {
     color: @white;
+
+    &--index {
+      &:focus {
+        outline: 4px solid rgba(255, 255, 255, 0.4);
+      }
+    }
   }
 }
 
@@ -90,12 +105,6 @@
   }
 
   @media (min-width: @width-tablet) {
-    padding-left: 34px;
-    border-top: none;
-  }
-
-  @media (min-width: @width-tablet) {
-    padding-left: 34px;
     border-top: none;
   }
 }
