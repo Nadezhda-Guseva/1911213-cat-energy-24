@@ -16,7 +16,19 @@
   &:focus {
     border-radius: 4px;
     outline: 4px solid rgba(104, 183, 56, 0.5);
-    outline-offset: 8px;
+    text-underline-offset: 4px;
+  }
+
+  &:focus:not(:focus-visible) {
+    border-radius: 0;
+    outline: none;
+    text-underline-offset: 0;
+  }
+
+  &:focus-visible {
+    border-radius: 4px;
+    outline: 4px solid rgba(104, 183, 56, 0.5);
+    text-underline-offset: 4px;
   }
 
   &:active {

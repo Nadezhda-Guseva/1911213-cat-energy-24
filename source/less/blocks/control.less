@@ -14,27 +14,12 @@
     }
   }
 
-  &:focus-within {
-    outline: none;
-
-    .control__mark {
-      outline: 4px solid rgba(104, 183, 56, 0.5);
-    }
-
-    .control__label {
-      text-decoration: underline;
-      text-decoration-color: @black;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 4px;
-    }
+  &--disabled {
+    opacity: 30%;
   }
 
   &:active {
     opacity: 60%;
-  }
-
-  &--disabled {
-    opacity: 30%;
   }
 
   @media (min-width: @width-tablet) {
@@ -87,12 +72,51 @@
   left: 0;
   width: 30px;
   height: 30px;
-  background-image: url("../img/icons/check-mark.svg");
+  background-image: url("../img/sprite.svg#check-mark");
   background-position: center;
   background-repeat: no-repeat;
 
   @media (min-width: @width-tablet) {
     width: 40px;
     height: 40px;
+    background-size: 40px 40px;
+  }
+}
+
+.control__input {
+  &:focus {
+    ~ .control__mark {
+      outline: 4px solid rgba(104, 183, 56, 0.5);
+    }
+
+    ~ .control__label {
+      text-decoration: underline;
+      text-decoration-color: @black;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+  }
+
+  &:focus:not(:focus-visible) {
+    ~ .control__mark {
+      outline: none;
+    }
+
+    ~ .control__label {
+      text-decoration: none;
+    }
+  }
+
+  &:focus-visible {
+    ~ .control__mark {
+      outline: 4px solid rgba(104, 183, 56, 0.5);
+    }
+
+    ~ .control__label {
+      text-decoration: underline;
+      text-decoration-color: @black;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
   }
 }

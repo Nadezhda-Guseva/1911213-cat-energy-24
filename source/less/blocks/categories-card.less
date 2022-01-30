@@ -114,7 +114,7 @@
 }
 
 .categories-card__button {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
   gap: 16px;
@@ -127,31 +127,40 @@
   color: @black;
 
   &::after {
-    content: url("../img/icons/icon-arrow-small.svg");
+    content: url("../img/sprite.svg#icon-arrow-small");
     height: 32px;
     width: 32px;
   }
 
   &:hover {
     &::after {
-      content: url("../img/icons/icon-arrow-big.svg");
+      content: url("../img/sprite.svg#icon-arrow-big");
     }
   }
 
   &:focus {
+    border-radius: 4px;
+    outline: 4px solid rgba(104, 183, 56, 0.5);
+    outline-offset: 4px;
+  }
+
+  &:focus:not(:focus-visible) {
+    border-radius: 0;
     outline: none;
-    transform: translateX(20px);
-    text-decoration: underline;
-    text-decoration-color: @black;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
+    outline-offset: 0;
+  }
+
+  &:focus-visible {
+    border-radius: 4px;
+    outline: 4px solid rgba(104, 183, 56, 0.5);
+    outline-offset: 4px;
   }
 
   &:active {
     opacity: 30%;
 
     &::after {
-      content: url("../img/icon-arrow-big.svg");
+      content: url("../img/sprite.svg#icon-arrow-big");
     }
   }
 
