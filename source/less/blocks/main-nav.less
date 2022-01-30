@@ -43,9 +43,15 @@
   }
 
   &:focus {
-    border-radius: 4px;
     outline: 4px solid rgba(104, 183, 56, 0.5);
-    outline-offset: 4px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 4px solid rgba(104, 183, 56, 0.5);
   }
 
   &:active {
@@ -59,13 +65,28 @@
     line-height: 24px;
     font-weight: 400;
     border-top: none;
+
+    &:focus {
+      border-radius: 4px;
+      outline-offset: 4px;
+    }
+
+    &:focus:not(:focus-visible) {
+      border-radius: 0;
+      outline-offset: 0;
+    }
+
+    &:focus-visible {
+      border-radius: 4px;
+      outline-offset: 4px;
+    }
   }
 
   @media (min-width: @width-desktop) {
     color: @white;
 
     &--index {
-      &:focus {
+      &:focus-visible {
         outline: 4px solid rgba(255, 255, 255, 0.4);
       }
     }

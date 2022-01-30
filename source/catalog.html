@@ -2,16 +2,16 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="images/favicons/favicon-apple.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
-    <header class="page-header">
+    <header class="page-header page-header--nav-openned">
       <div class="page-header__wrapper" >
         <a class="page-header__logo" href="index.html">
           <picture>
@@ -20,7 +20,7 @@
             <img src="img/logo-mobile.svg" width="256" height="38" alt="Логотип «Кэт энерджи»">
           </picture>
         </a>
-        <button class="page-header__toggle page-header__toggle--no-js" type="button">
+        <button class="page-header__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <nav class="page-header__main-nav main-nav">
@@ -312,24 +312,24 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link" href="https://vk.com/htmlacademy">
-                <svg class="social__icon" width="28" height="28" viewBox="0 0 28 28">
-                  <use xlink:href="#icon-vkontakte"></use>
+                <svg class="social__icon" aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 28 28">
+                  <use href="img/sprite.svg#icon-vkontakte"/>
                 </svg>
                 <span class="visually-hidden">Мы Вконтакте</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="https://www.instagram.com/htmlacademy">
-                <svg class="social__icon" width="28" height="28" viewBox="0 0 28 28">
-                  <use xlink:href="#icon-instagram"></use>
+                <svg class="social__icon" aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 28 28">
+                  <use href="img/sprite.svg#icon-instagram"/>
                 </svg>
                 <span class="visually-hidden">Мы в Инстаграме</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="https://www.facebook.com/htmlacademy">
-                <svg class="social__icon" width="28" height="28" viewBox="0 0 28 28">
-                  <use xlink:href="#icon-facebook"></use>
+                <svg class="social__icon" aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 28 28">
+                  <use href="img/sprite.svg#icon-facebook"/>
                 </svg>
                 <span class="visually-hidden">Мы в Фейсбуке</span>
               </a>
@@ -344,5 +344,6 @@
         </a>
       </div>
     </footer>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
