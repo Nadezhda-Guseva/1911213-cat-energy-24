@@ -5,11 +5,10 @@ import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
-import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
-import svgstore from 'gulp-svgstore';
+import svgSprite from 'gulp-svg-sprite';
 import del from 'del';
 import browser from 'browser-sync';
 
@@ -35,7 +34,14 @@ const html = () => {
     .pipe(gulp.dest('build'));
 }
 
-// Scripts (добавить, если будет js)
+// JS
+
+const scripts = () => {
+  return gulp.src('source/js/script.js')
+    .pipe(terser())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"));
+}
 
 // Images
 
@@ -69,10 +75,11 @@ const svg = () =>
 
 const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
-    .pipe(svgo())
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
+    .pipe(svgSprite({
+      mode: {
+        stack: true
+      }
+     }))
     .pipe(rename('sprite.svg'))
     .pipe(gulp.dest('build/img'));
 }
@@ -134,6 +141,7 @@ export const build = gulp.series(
   gulp.parallel(
     styles,
     html,
+    scripts,
     svg,
     sprite,
     createWebp
@@ -149,6 +157,7 @@ export default gulp.series(
   gulp.parallel(
     styles,
     html,
+    scripts,
     svg,
     sprite,
     createWebp

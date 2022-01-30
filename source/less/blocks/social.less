@@ -26,7 +26,6 @@
 
 .social__link {
   display: block;
-  height: auto;
 
   &:hover {
     .social__icon {
@@ -35,12 +34,18 @@
   }
 
   &:focus {
-    outline: none;
+    border-radius: 4px;
+    outline: 4px solid rgba(104, 183, 56, 0.5);
+  }
 
-    .social__icon {
-      border-radius: 4px;
-      outline: 4px solid rgba(104, 183, 56, 0.5);
-    }
+  &:focus:not(:focus-visible) {
+    border-radius: 0;
+    outline: none;
+  }
+
+  &:focus-visible {
+    border-radius: 4px;
+    outline: 4px solid rgba(104, 183, 56, 0.5);
   }
 
   &:active {

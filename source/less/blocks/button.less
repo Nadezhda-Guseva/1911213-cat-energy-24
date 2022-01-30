@@ -21,6 +21,14 @@
     outline: 4px solid rgba(104, 183, 56, 0.5);
   }
 
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 4px solid rgba(104, 183, 56, 0.5);
+  }
+
   &:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: @primary-hover;

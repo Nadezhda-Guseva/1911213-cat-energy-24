@@ -22,10 +22,21 @@
   }
 
   &:focus {
+    border-radius: 4px;
+    outline: 4px solid rgba(104, 183, 56, 0.5);
+    text-underline-offset: 4px;
+  }
+
+  &:focus:not(:focus-visible) {
+    border-radius: 0;
     outline: none;
-    text-decoration-style: solid;
-    text-decoration-color: @black;
-    text-decoration-thickness: 2px;
+    text-underline-offset: 0;
+  }
+
+  &:focus-visible {
+    border-radius: 4px;
+    outline: 4px solid rgba(104, 183, 56, 0.5);
+    text-underline-offset: 4px;
   }
 
   &:active {
