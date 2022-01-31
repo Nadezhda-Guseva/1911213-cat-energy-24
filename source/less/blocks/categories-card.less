@@ -1,11 +1,18 @@
 .categories-card {
   position: relative;
-  padding: 22px;
+  padding: 20px;
+  padding-bottom: 14px;
   background-color: @bg-light;
 
   @media (min-width: @width-tablet) {
     padding: 52px;
-    padding-top: 68px;
+    padding-top: 85px;
+    padding-bottom: 54px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding-top: 77px;
+    padding-bottom: 58px;
   }
 
   &--slimming {
@@ -13,7 +20,7 @@
       content: "";
       position: absolute;
       top: 22px;
-      left: 22px;
+      left: 20px;
       width: 53px;
       height: 50px;
       background-image: url("../img/cat-slimming.svg");
@@ -22,7 +29,7 @@
       background-position: center;
 
       @media (min-width: @width-tablet) {
-        top: 80px;
+        top: 89px;
         left: 446px;
         width: 200px;
         height: 211px;
@@ -43,7 +50,7 @@
       position: absolute;
       top: 24px;
       left: 12px;
-      width: 57px;
+      width: 67px;
       height: 50px;
       background-image: url("../img/cat-weight-gain.svg");
       background-repeat: no-repeat;
@@ -51,7 +58,7 @@
       background-position: center;
 
       @media (min-width: @width-tablet) {
-        top: 80px;
+        top: 94px;
         left: 412px;
         width: 268px;
         height: 200px;
@@ -60,8 +67,8 @@
       @media (min-width: @width-desktop) {
         top: 46px;
         left: 32px;
-        width: 100px;
-        height: 106px;
+        width: 134px;
+        height: 100px;
       }
     }
   }
@@ -69,19 +76,19 @@
 
 .categories-card__title {
   margin: 0;
-  margin-bottom: 30px;
-  padding-top: 10px;
+  margin-bottom: 32px;
+  padding-top: 8px;
   padding-left: 70px;
   font-family: @accent-font;
   font-size: 24px;
-  line-height: 37px;
+  line-height: 36px;
   font-weight: 400;
   text-transform: uppercase;
   color: @black;
 
   @media (min-width: @width-tablet) {
     width: 340px;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
     padding: 0;
     font-size: 36px;
     line-height: 36px;
@@ -89,7 +96,7 @@
 
   @media (min-width: @width-desktop) {
     margin-bottom: 74px;
-    padding-top: 14px;
+    padding-top: 0;
     padding-left: 162px;
     width: auto;
   }
@@ -97,19 +104,20 @@
 
 .categories-card__text {
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   padding-bottom: 22px;
   border-bottom: 1px solid @border-light;
 
   @media (min-width: @width-tablet) {
     width: 340px;
-    margin-bottom: 48px;
+    margin-bottom: 50px;
     padding: 0;
     border-bottom: none;
   }
 
   @media (min-width: @width-desktop) {
     width: auto;
+    margin-bottom: 25px;
   }
 }
 

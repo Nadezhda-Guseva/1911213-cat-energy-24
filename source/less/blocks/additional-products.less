@@ -25,7 +25,11 @@
 
 .additional-products__card {
   &:last-of-type {
-    margin-bottom: 36px;
+    margin-bottom: 35px;
+
+    @media (min-width: @width-tablet) {
+      margin-bottom: 69px;
+    }
 
     @media (min-width: @width-desktop) {
       margin-bottom: 0;
@@ -39,8 +43,8 @@
   margin-bottom: 36px;
   font-family: @accent-font;
   font-size: 24px;
-  line-height: 26px;
-  font-weight: 700;
+  line-height: 24px;
+  font-weight: 400;
   color: @black;
 
   span {
@@ -57,7 +61,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 14px;
+    top: 16px;
     left: -244px;
     right: -244px;
     z-index: 1;
@@ -66,25 +70,36 @@
   }
 
   @media (min-width: @width-tablet) {
-    margin-bottom: 80px;
+    margin-bottom: 81px;
     font-size: 36px;
     line-height: 36px;
+
+    span {
+      margin: 0;
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+
+    &::before {
+      top: 23px;
+      left: -500px;
+      right: -500px;
+    }
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: 80px;
 
     span {
       margin-left: -40px;
       padding-left: 40px;
       padding-right: 40px;
     }
-
-    &::before {
-      top: 20px;
-      left: -500px;
-      right: -500px;
-    }
   }
 }
 
 .additional-products__banner {
+  position: relative;
   display: block;
   min-height: 288px;
   font-size: 16px;
@@ -124,22 +139,19 @@
 
   &::before {
     content: "";
+    position: absolute;
+    top: 59px;
+    left: 101px;
     display: block;
     width: 80px;
     height: 80px;
-    margin: 0 auto;
-    padding-top: 58px;
-    padding-bottom: 28px;
     background-image: url("../img/sprite.svg#icon-gift");
-    background-position: center;
+    background-size: contain;
+    background-position: top center;
     background-repeat: no-repeat;
   }
 
   @media (min-width: @width-tablet) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
     min-height: 200px;
     background-image: url("../img/catalog-banner/catalog-banner-tablet.jpg");
 
@@ -148,8 +160,8 @@
     }
 
     &::before {
-      margin: 0;
-      padding: 60px 76px;
+      top: 57px;
+      left: 78px;
     }
   }
 
@@ -163,7 +175,8 @@
     }
 
     &::before {
-      padding: 56px 82px 46px;
+      top: 56px;
+      left: 83px;
     }
   }
 }
@@ -171,15 +184,17 @@
 .additional-products__caption {
   display: block;
   padding: 20px;
+  padding-top: 187px;
 
   @media (min-width: @width-tablet) {
-    padding-left: 38px;
+    padding-top: 71px;
+    padding-left: 422px;
     text-align: left;
   }
 
   @media (min-width: @width-desktop) {
     padding: 38px;
-    padding-top: 0;
+    padding-top: 186px;
     text-align: center;
   }
 }

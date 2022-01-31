@@ -1,6 +1,7 @@
 .social {
   display: flex;
-  padding: 20px 0;
+  padding-top: 18px;
+  padding-bottom: 14px;
   border-top: 1px solid @border-light;
   border-bottom: 1px solid @border-light;
 
@@ -14,18 +15,23 @@
 .social__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 24px;
   margin: 0 auto;
   padding: 0;
   list-style-type: none;
 
   @media (min-width: @width-tablet) {
-    gap: 22px;
+    gap: 17px;
   }
 }
 
 .social__link {
   display: block;
+  height: 30px;
+
+  @media (min-width: @width-tablet) {
+    height: 32px;
+  }
 
   &:hover {
     .social__icon {
@@ -59,4 +65,10 @@
 .social__icon {
   fill: @icon-medium;
   padding: 4px;
+
+  @media (min-width: @width-tablet) {
+    padding: 0;
+    width: 32px;
+    height: 32px;
+  }
 }
