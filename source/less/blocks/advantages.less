@@ -26,7 +26,7 @@
     display: grid;
     grid-template-columns: 248px 248px;
     column-gap: 136px;
-    row-gap: 90px;
+    row-gap: 117px;
   }
 
   @media (min-width: @width-desktop) {
@@ -94,6 +94,7 @@
 
     &--healthy::after {
       content: "1";
+      right: 20px;
     }
 
     &--easy::after {
@@ -111,9 +112,13 @@
 }
 
 .advantages__title {
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 
   @media (min-width: @width-tablet) {
     margin-bottom: 71px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: 73px;
   }
 }

@@ -26,6 +26,10 @@
     }
   }
 
+  @media (min-width: @width-tablet) {
+    gap: 18px;
+  }
+
   &--e-mail {
     position: relative;
 
@@ -59,7 +63,7 @@
       right: 12px;
       width: 20px;
       height: 20px;
-      mask-image: url("../img/icon-phone.svg");
+      mask-image: url("../img/sprite.svg#icon-phone");
       mask-repeat: no-repeat;
       mask-size: 20px 20px;
       mask-position: center;
@@ -72,9 +76,20 @@
     }
   }
 
-  &--text-area {
+  &--area {
+    display: block;
+
     .text-field__input {
+      width: calc(100% - 27px);
+      height: 130px;
+      padding: 10px 13px;
       resize: none;
+
+      @media (min-width: @width-tablet) {
+        width: calc(100% - 39px);
+        height: 150px;
+        padding: 10px 19px;
+      }
     }
   }
 }
@@ -90,7 +105,7 @@
 
   @media (min-width: @width-tablet) {
     font-size: 20px;
-    line-height: 28px;
+    line-height: 29px;
   }
 }
 
@@ -99,7 +114,7 @@
 }
 
 .text-field__input {
-  padding: 14px 16px;
+  padding: 9px 14px;
   border: 1px solid @border-input;
 
   &:focus {
@@ -108,5 +123,9 @@
 
   &:hover {
     border: 1px solid @border-medium;
+  }
+
+  @media (min-width: @width-tablet) {
+    padding: 10px 16px 11px;
   }
 }

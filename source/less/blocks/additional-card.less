@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 14px;
   padding-top: 14px;
-  padding-bottom: 20px;
+  padding-bottom: 17px;
   border-top: 1px solid @border-medium;
 
   &:last-of-type {
@@ -14,8 +14,8 @@
     display: grid;
     grid-template-columns: 1fr max-content max-content;
     column-gap: 50px;
-    row-gap: 26px;
-    padding: 26px 38px 28px;
+    row-gap: 19px;
+    padding: 26px 38px 27px;
     border: 1px solid @border-medium;
     border-bottom: none;
   }
@@ -24,7 +24,7 @@
     grid-template-columns: 1fr 1fr max-content 244px;
     align-items: center;
     gap: 38px;
-    padding: 16px 0;
+    padding: 16px 0 15px;
     border-left: none;
     border-right: none;
   }
@@ -42,6 +42,8 @@
 
   @media (min-width: @width-tablet) {
     grid-column: 1 / 2;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   @media (min-width: @width-desktop) {
@@ -58,8 +60,12 @@
 
   @media (min-width: @width-tablet) {
     font-size: 16px;
-    line-height: 20px;
+    line-height: 26px;
     text-align: right;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding-top: 6px;
   }
 }
 
@@ -75,6 +81,10 @@
 
 .additional-card__button {
   grid-column: 1 / -1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  line-height: 20px;
 
   @media (min-width: @width-desktop) {
     grid-column: 4 / -1;
