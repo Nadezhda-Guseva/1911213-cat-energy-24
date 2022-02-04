@@ -1,14 +1,29 @@
 .page-header {
   position: relative;
-  border-bottom: 1px solid @border-light;
+  border-bottom: 1px solid @border-input;
 
   &--nav-openned {
     .page-header__main-nav {
+      position: absolute;
       display: block;
+      overflow: hidden;
     }
 
     .page-header__toggle {
       background-image: url("../img/sprite.svg#icon-cross");
+    }
+  }
+
+  &--no-js {
+    overflow: hidden;
+
+    .page-header__main-nav {
+      position: static;
+      display: block;
+    }
+
+    .page-header__toggle {
+      display: none;
     }
   }
 
@@ -56,10 +71,6 @@
   z-index: 10;
   width: 100%;
   display: none;
-
-  &--opened {
-    display: block;
-  }
 
   @media (min-width: @width-tablet) {
     position: static;

@@ -41,7 +41,6 @@
   }
 }
 
-
 .contacts__caption {
   margin: 0;
   font-family: @accent-font;
@@ -64,11 +63,20 @@
 
   @media (min-width: @width-tablet) {
     font-size: 16px;
-    line-height: 26px;
+    line-height: 16px;
     text-align: right;
+
+    span {
+      display: block;
+      padding-top: 28px;
+    }
   }
 
   @media (min-width: @width-desktop) {
     text-align: left;
+
+    span {
+      padding-top: 22px;
+    }
   }
 }

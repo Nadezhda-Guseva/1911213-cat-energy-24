@@ -37,7 +37,6 @@
   text-transform: uppercase;
   text-decoration: none;
   color: @black;
-  border-top: 1px solid @border-light;
 
   &:hover {
     opacity: 60%;
@@ -94,11 +93,17 @@
 }
 
 .main-nav__item {
-  &:last-of-type {
-    border-bottom: 1px solid @border-light;
+  @media (max-width: @width-mobile-only) {
+    position: relative;
 
-    @media (min-width: @width-tablet) {
-      border-bottom: none;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -244px;
+      right: -244px;
+      height: 1px;
+      background-color: @border-input;
     }
   }
 
